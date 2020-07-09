@@ -22,7 +22,7 @@ set $term alacritty
 set $highlight #3daee9
 set $prompt #18b21C
 set $uifont "Fira Code"
-set $menu bemenu-run --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight" | xargs swaymsg exec
+set $menu j4-dmenu-desktop --dmenu='bemenu -i --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight"' | xargs swaymsg exec
 
 ### Output configuration
 #
@@ -209,7 +209,7 @@ bindsym $mod+r mode "resize"
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-bindsym XF86AudioMute exec amixer Master sset toggle
+bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
