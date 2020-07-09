@@ -1,0 +1,5 @@
+font=pango: Fira Code 10
+group-by=app-name
+background-color=#000000CF
+border-color=#4C7899EF
+default-timeout=7000
