@@ -1,0 +1,18 @@
+ctl.equal {
+  type equal;
+}
+
+pcm.plugequal {
+  type equal;
+  slave.pcm "plug:dmix";
+}
+
+#pcm.equal {
+  # Falls du den Equalizer immer
+  # verwenden willst, kommentier
+  # die folgende Zeile aus und
+  # die obige ein.
+pcm.!default {
+  type plug;
+  slave.pcm plugequal;
+}
