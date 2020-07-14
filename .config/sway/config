@@ -217,6 +217,19 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+#
+# Screen capture
+#
+
+# capture all screens to clipboard    
+bindsym $mod+Print exec grim - | wl-copy    
+    
+# capture the specified screen area to clipboard    
+bindsym $mod+Alt+Print exec grim -g "$(slurp)" - | wl-copy 
+
+# capture all screens to video
+bindsym $mod+Print+r exec wf-recorder
+bindsym $mod+Alt+Print+r wf-recorder -g "$(slurp)"
 
 #
 # Notifications:
